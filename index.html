@@ -14,8 +14,9 @@
     <header class="pink.darken-3">
         <h1>Touch Grass Motivator</h1>
     </header>
-    <div class="container lime.lighten-1">
-        <select id="chooseRegion" onclick="chooseRegion()">
+    <div class="container lime lighten-1">
+        <label for="chooseRegion">Select your region:</label>
+        <select id="chooseRegion" class="browser-default">
             <option value="0">NA</option>
             <option value="1">EUN</option>
             <option value="2">EUW</option>
@@ -35,7 +36,7 @@
         </select>
         <input id="summonerInput" placeholder="Search your summoner!" />
         <button id="submitBtn"></button>
-
+        
         <div class="summonerRank">Rank & Tier</div>
         <div class="gifContainer"></div>
     </div>
