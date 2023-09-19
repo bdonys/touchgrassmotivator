@@ -2,6 +2,11 @@
   
 }
 
+header {
+    text-align: center;
+    background-color: purple;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,4 +14,9 @@ body {
 
 .container {
     padding: 20px;
+    text-align: center;
+}
+
+#submitBtn {
+    background-color: rgb(133, 101, 133);
 }
