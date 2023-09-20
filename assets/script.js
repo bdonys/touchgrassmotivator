@@ -1,11 +1,11 @@
 const apiKey = "RGAPI-e57c88a4-47b1-4cd1-a19c-c822a6db6554";
-const summonerName = ""; // Pull from username input
+let summonerName = ""; // Pull from username input
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   const usernameInput = document.getElementById('username');
-  const summonerName = usernameInput.value;
+  summonerName = usernameInput.value;
 
 
 
