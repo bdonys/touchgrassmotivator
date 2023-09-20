@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link type="text/css" rel="stylesheet" href="assets/materialize.css"  media="screen,projection"/> -->
-    <!-- <link rel="cssframework" href="assets/materialize.css" /> -->
     <!-- <link rel="stylesheet" href="assets/stylesheet.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Touch Grass Motivator</title>
 </head>
 <body>
-    <header class="pink.darken-3">
+    <header class="card-panel green darken-1 white-text center-align z-depth-5">
         <h1>Touch Grass Motivator</h1>
+            <p> Here you will acquire motivation to keep climbing or to go outside!</p>
     </header>
-    <div class="container lime lighten-1">
-        <label for="chooseRegion">Select your region:</label>
+    
+    <div class="container">
+        <h2 class="center-align">Select your region!</h2>
         <select id="chooseRegion" class="browser-default">
             <option value="0">NA</option>
             <option value="1">EUN</option>
@@ -34,12 +35,23 @@
             <option value="14">VN</option>
             <option value="15">BR</option>
         </select>
-        <input id="summonerInput" placeholder="Search your summoner!" />
-        <button id="submitBtn"></button>
         
-        <div class="summonerRank">Rank & Tier</div>
-        <div class="gifContainer"></div>
+        <br>
+        </br>
+
+        <form>
+            <input type="text" name="username" placeholder="Summoner Name" id="username">
+            <button type="submit">Submit!</button>
+        </form>
+       
+        <br>
+        </br>
+
+        <h3 class="center-align">Rank & Tier</h3>
+        
+        <div class="gifContainer circle"></div>
     </div>
+
     <script src="assets/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
