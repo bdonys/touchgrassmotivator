@@ -1,11 +1,11 @@
-const apiKey = "RGAPI-e57c88a4-47b1-4cd1-a19c-c822a6db6554";
-let summonerName = ""; // Pull from username input
+const apiKey = "RGAPI-2457ac11-d0de-4a5c-9385-505c689b026d";
+const summonerName = ""; // Pull from username input
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   const usernameInput = document.getElementById('username');
-  summonerName = usernameInput.value;
+  const summonerName = usernameInput.value;
 
 
 
@@ -36,6 +36,28 @@ form.addEventListener('submit', function (event) {
         const tier = rankedData[0].tier;
         console.log(`Summoner's Rank: ${tier} ${rank}`);
         rankTierEl.textContent = `Summoner's Rank: ${tier} ${rank}`;
+
+        const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5";
+        const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
+        fetch(`${url}&q=motivational`)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(giphyData) {
+            const giphys = giphyData.data;
+            if (giphys.length > 0) {
+              const randomIndex = Math.floor(Math.random() * giphys.length);
+              const randomGif = giphys[randomIndex];
+              const gifUrl = randomGif.images.original.url;
+
+              const gifContainer = document.querySelector('.gifContainer');
+              const imgEl = document.createElement('img');
+
+              imgEl.setAttribute('src', gifUrl);
+              gifContainer.innerHTML = '';
+              gifContainer.appendChild(imgEl);
+            }
+          })
       } else {
         // If player has no rank
         console.log("Summoner has no ranked data.");
