@@ -1,5 +1,11 @@
-const apiKey = "RGAPI-2457ac11-d0de-4a5c-9385-505c689b026d";
+const apiKey = "RGAPI-843e8e36-6268-4a1b-83bd-bcc4a760760c";
 const summonerName = ""; // Pull from username input
+
+
+const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5";
+const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
+
+
 
 const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
@@ -37,13 +43,12 @@ form.addEventListener('submit', function (event) {
         console.log(`Summoner's Rank: ${tier} ${rank}`);
         rankTierEl.textContent = `Summoner's Rank: ${tier} ${rank}`;
 
-        const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5";
-        const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
+
         fetch(`${url}&q=motivational`)
-          .then(function(response) {
+          .then(function (response) {
             return response.json();
           })
-          .then(function(giphyData) {
+          .then(function (giphyData) {
             const giphys = giphyData.data;
             if (giphys.length > 0) {
               const randomIndex = Math.floor(Math.random() * giphys.length);
@@ -62,6 +67,26 @@ form.addEventListener('submit', function (event) {
         // If player has no rank
         console.log("Summoner has no ranked data.");
         rankTierEl.textContent = "Summoner has no ranked data.";
+
+        fetch(`${url}&q=wut`)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (giphyData) {
+            const giphys = giphyData.data;
+            if (giphys.length > 0) {
+              const randomIndex = Math.floor(Math.random() * giphys.length);
+              const randomGif = giphys[randomIndex];
+              const gifUrl = randomGif.images.original.url;
+
+              const gifContainer = document.querySelector('.gifContainer');
+              const imgEl = document.createElement('img');
+
+              imgEl.setAttribute('src', gifUrl);
+              gifContainer.innerHTML = '';
+              gifContainer.appendChild(imgEl);
+            }
+          })
       }
     })
     .catch(function (error) {
