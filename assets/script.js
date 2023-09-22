@@ -1,6 +1,4 @@
 const apiKey = "RGAPI-843e8e36-6268-4a1b-83bd-bcc4a760760c";
-const summonerName = ""; // Pull from username input
-
 
 const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5";
 const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
@@ -11,12 +9,14 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   const usernameInput = document.getElementById('username');
-  const summonerName = usernameInput.value;
+  const summonerName = usernameInput.value; // Pull from username input
+  const serverEl = document.getElementById("chooseRegion");
+  const server = serverEl.value;
 
 
 
   //Fetch the encryptedSummonerId
-  const summonerFetchURL = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apiKey}`;
+  const summonerFetchURL = `https://${server}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apiKey}`;
 
   fetch(summonerFetchURL)
     .then(function (response) {
@@ -26,7 +26,8 @@ form.addEventListener('submit', function (event) {
       const encryptedSummonerId = data.id; // Extract encryptedSummonerId
 
       //Fetch rank and tier using the encryptedSummonerId
-      const rankedFetchURL = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${encryptedSummonerId}?api_key=${apiKey}`;
+      const rankedFetchURL = `https://${server}.api.riotgames.com/lol/league/v4/entries/by-summoner/${encryptedSummonerId}?api_key=${apiKey}`;
+      console.log(`${server}`)
 
       return fetch(rankedFetchURL);
     })
