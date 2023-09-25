@@ -1,4 +1,4 @@
-const apiKey = "RGAPI-843e8e36-6268-4a1b-83bd-bcc4a760760c";
+const apiKey = "RGAPI-3eb93beb-247a-48d8-a4c4-997555ba353e";
 
 const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5";
 const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
@@ -92,6 +92,6 @@ form.addEventListener('submit', function (event) {
     })
     .catch(function (error) {
       // If returning error
-      console.log("Error:", error);
+      console.error(error);
     });
 })
