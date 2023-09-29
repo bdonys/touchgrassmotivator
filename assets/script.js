@@ -1,4 +1,4 @@
-const apiKey = "RGAPI-2d4feef6-5d91-4d94-971d-8afccc147214"; // Riot API key
+const apiKey = "RGAPI-f934fac2-d96e-429d-9426-6b553ffe4d18"; // Riot API key
 
 const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5"; // Giphy API key
 const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
