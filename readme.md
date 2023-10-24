@@ -34,6 +34,9 @@ Developers: Brandon Sur, Ricky Phung, Alejandro Le Mendez, and Jared Eye.
 
 ## Additional Resources
 
+Link to the deployed page:
+https://bdonys.github.io/touchgrassmotivator/
+
 The following image is what you would see for the region selector.  Click the region that aligns with your summoner's name in order to have an accurate summoner rank status.
 ![image](https://github.com/bdonys/touchgrassmotivator/assets/140272444/bb3563c9-fada-43b9-b273-b200409c87cc)
 
