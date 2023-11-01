@@ -1,6 +1,6 @@
-const apiKey = "RGAPI-7957f7cf-4d28-4889-b451-17e1de4bfba8"; // Riot API key requires a refresh every 24 hours
+const apiKey = ""; // Riot API key requires a refresh every 24 hours
 
-const API_KEY = "O27lXioiSMvH8yX0tpSkUWcHdgV1FzN5"; // Giphy API key
+const API_KEY = ""; // Giphy API key
 const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}`;
 
 
